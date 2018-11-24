@@ -46,6 +46,11 @@ $(function () {
 
 	render();
 
+	$('#cancelButton').on('click', closeModal) 
+	function closeModal(event) {
+		$('.validation').removeClass('show')
+	}
+
 	$('#submitButton').on('click', submitKudo)
 	function submitKudo(event) {
 		event.preventDefault();
@@ -65,7 +70,8 @@ $(function () {
 				$('#inputModal').modal('toggle')
 			)
 			.then(
-				render()
+				render(),
+				$('.validation').removeClass('show')
 			)
 		}
 	}

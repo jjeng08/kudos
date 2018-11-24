@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div class="row border-bottom border-secondary align-middle">
+	<div class="row border-bottom border-secondary align-middle bg-dark text-white">
 		<div class="col-md-3">
 			<div class="flexbox">
 				<h3 class="text-center">Tiny Improvements</h3>
@@ -40,48 +40,50 @@
 
 	<div id="inputModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="inputModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="inputModalLabel">Let's Dish Out Some Cred!</h5>
+			<div class="modal-content border-dark">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title text-center" id="inputModalLabel">Let's Dish Out Some Cred!</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="row">
 						<div class="col" align="center">
-							<label for="senderList">Sender</label>
-							<select id="senderList" class="form-control">
-									<option selected="selected">Pick!</option>
+							<label class="font-weight-bold" for="senderList">Sender</label>
+							<select id="senderList" class="form-control border-primary">
+								<option selected="selected">Pick!</option>
 							</select>
 						</div>
 						<div class="col" align="center">
-							<label for="receiverList">Receiver</label>
-							<select id="receiverList" class="form-control">
-									<option selected="selected">Choose!</option>
+							<label class="font-weight-bold" for="receiverList">Receiver</label>
+							<select id="receiverList" class="form-control border-primary">
+								<option selected="selected">Choose!</option>
 							</select>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12" align="center">
-							<label class="label" for="titleInput">Title</label>
+							<label class="font-weight-bold" for="titleInput">Title</label>
 						</div>
 						<div class="col-md-12" align="center">
-							<input type="text" id="titleInput">
+							<input class="form-control form-rounded border-primary" type="text" id="titleInput">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12" align="center">
-							<label class="label" for="bodyInput">Say It With Feeling!</label>
+							<label class="font-weight-bold" for="bodyInput">Say It With Feeling!</label>
 						</div>
 						<div class="col-md-12" align="center">
-							<textarea rows="5" id="bodyInput"></textarea>
+							<textarea class="form-control form-rounded border-primary" rows="5" id="bodyInput"></textarea>
 						</div>
 					</div>
-					<div class="validation">Whoops! Please fill in everything!</div> 
+					<div class="validation">
+						<div class="flexbox">
+							<div class="border-dark font-weight-bold" id="warningMessage">Whoops! Please fill in everything!</div>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
-					
 					<button type="button" id="cancelButton" class="btn btn-secondary" data-dismiss="modal">Never Mind</button>
 					<button type="button" id="submitButton" class="btn btn-primary">It's Kudo Time!</button>
 				</div>

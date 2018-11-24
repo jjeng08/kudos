@@ -5,11 +5,19 @@ html, body{
 }
 .validation{
 	display:none;
-	color:red;
+	width:100%;
 }
 
 .show{
 	display:block;
+}
+
+#inputModalLabel{
+	width:100%;
+}
+
+label{
+	margin:10px;
 }
 
 .flexbox{
@@ -35,4 +43,17 @@ html, body{
 	margin-top:20px;
 }
 
+#titleInput{
+	width:100%;
+}
 
+#bodyInput{
+	width:100%;
+}
+
+#warningMessage{
+	color:red;
+	width:80%;
+	margin:10px;
+	text-align:center
+}
