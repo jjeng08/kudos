@@ -12,7 +12,8 @@ mongoose.connect('mongodb://localhost/kudos', {useNewUrlParser: true});
 
 require('./routes/api-routes.js')(app);
 
-require('./models');
+require('./models/Kudo.js');
+require('./models/User.js');
 
 app.listen(PORT, function(){
 	console.log('App running on PORT: ' + PORT);
