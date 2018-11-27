@@ -19,6 +19,8 @@
   "homepage": "https://github.com/jjeng08/kudos#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.3.13"
+    "logger": "0.0.1",
+    "mongoose": "^5.3.13",
+    "request": "^2.88.0"
   }
 }
