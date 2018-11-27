@@ -5,7 +5,7 @@ $(function () {
 			.then(function (data) {
 				for (let i = 0; i < data.length; i++) {
 					const name = data[i].username;
-					$('#senderList').append(`<option value="${name}">${name}</option>`)
+					$('#senderList').append(`<option value="${data[i]._id}">${name}</option>`)
 					$('#receiverList').append(`<option value="${name}">${name}</option>`)
 				}
 			}).catch(function (err) {
@@ -16,6 +16,7 @@ $(function () {
 	getUsers();
 
 	function render() {
+		$('#kudosDisplay').empty();
 		$.get('/api/kudos/')
 			.then(function (data) {
 				for (let i = 0; i < data.length; i++) {
@@ -28,15 +29,15 @@ $(function () {
 				</div>
 				<div class="row">
 					<div class="col" align="center">
-						<h5>To: ${data[i].sender}</h5>
+						<h5>To: ${data[i].receiver}</h5>
 					</div>
 					<div class="col" align="center">
-						<h5>From: ${data[i].receiver}</h5>
+						<h5>From: ${data[i].sender}</h5>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col" align="center">
-					<div >${data[i].body}</div>
+					<div class="message">${data[i].body}</div>
 					</div>
 				</div>
 			</div>`)
@@ -46,8 +47,25 @@ $(function () {
 
 	render();
 
+	function reset(){
+		$('#senderList option[value=senderD]').attr('selected', 'selected');
+		$('#receiverList option[value=receiverD]').attr('selected', 'selected');
+		$('#titleInput').val('');
+		$('#bodyInput').val('');
+	}
+
+	$('#topBannerButton').on('click', openModal)
+	function openModal(event) {
+		event.preventDefault();
+	
+		reset();
+		$('#inputModal').addClass("show");
+	}
+
 	$('#cancelButton').on('click', closeModal) 
 	function closeModal(event) {
+		event.preventDefault();
+		
 		$('.validation').removeClass('show')
 	}
 
@@ -56,30 +74,23 @@ $(function () {
 		event.preventDefault();
 
 		const newKudo = {
-			sender: $('#senderList').val(),
+			senderId: $('#senderList').val(),
+			sender: $('#senderList option:selected').text(),
 			receiver: $('#receiverList').val(),
 			title: $('#titleInput').val().trim(),
 			body: $('#bodyInput').val().trim(),
 		};
-
 		if (newKudo.sender==='Pick!' || newKudo.receiver==='Choose!' || newKudo.title ==="" || newKudo.body ===""){
 			$('.validation').addClass('show')
 		} else {
 		$.post('/api/kudos', newKudo)
 			.then(
-				$('#inputModal').modal('toggle')
-			)
-			.then(
-				render(),
-				$('.validation').removeClass('show')
+				$('#inputModal').modal('toggle'),
+				$('.validation').removeClass('show'),
+				render()
 			)
 		}
 	}
 
-	$('#topBannerButton').on('click', openModal)
-	function openModal(event) {
-		event.preventDefault();
-		console.log("Here");
-		$('#inputModal').addClass("show");
-	}
+
 })

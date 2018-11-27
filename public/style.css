@@ -8,6 +8,10 @@ html, body{
 	width:100%;
 }
 
+.container{
+	margin-bottom:20px;
+}
+
 .show{
 	display:block;
 }
@@ -49,6 +53,14 @@ label{
 
 #bodyInput{
 	width:100%;
+}
+
+h4{
+	margin-top:10px;
+}
+
+.message{
+	margin-bottom:10px;
 }
 
 #warningMessage{
