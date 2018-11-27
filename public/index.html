@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="./app.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="row border-bottom border-secondary align-middle bg-dark text-white">
+		<div class="col-md-3">
+			<div class="flexbox">
+				<h3 class="text-center">Tiny Improvements</h3>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="flexbox">
+				<button id="topBannerButton" type="button" class="btn btn-primary button" data-toggle="modal" data-target="#inputModal">Give Kudos!</button>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="flexbox">
+				<img id="topBannerImage" src="https://www.kudos2u.com/wp-content/uploads/2017/08/Kudos_Logo_Foil.png" />
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="col-md-2"></div>
+		<div class="col-mid-8" id="kudosDisplay"></div>
+		<div class="col-md-2"></div>
+	</div>
+
+	<div id="inputModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="inputModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content border-dark">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title text-center" id="inputModalLabel">Let's Dish Out Some Cred!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col" align="center">
+							<label class="font-weight-bold" for="senderList">Sender</label>
+							<select id="senderList" class="form-control border-primary">
+								<option value="senderD">Pick!</option>
+							</select>
+						</div>
+						<div class="col" align="center">
+							<label class="font-weight-bold" for="receiverList">Receiver</label>
+							<select id="receiverList" class="form-control border-primary">
+								<option value="receiverD">Choose!</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12" align="center">
+							<label class="font-weight-bold" for="titleInput">Title</label>
+						</div>
+						<div class="col-md-12" align="center">
+							<input class="form-control form-rounded border-primary" type="text" id="titleInput">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12" align="center">
+							<label class="font-weight-bold" for="bodyInput">Say It With Feeling!</label>
+						</div>
+						<div class="col-md-12" align="center">
+							<textarea class="form-control form-rounded border-primary" rows="5" id="bodyInput"></textarea>
+						</div>
+					</div>
+					<div class="validation">
+						<div class="flexbox">
+							<div class="border-dark font-weight-bold" id="warningMessage">Whoops! Please fill in everything!</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="cancelButton" class="btn btn-secondary" data-dismiss="modal">Never Mind</button>
+					<button type="button" id="submitButton" class="btn btn-primary">It's Kudo Time!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+</body>
+
+</html>
