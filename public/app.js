@@ -48,8 +48,8 @@ $(function () {
 	render();
 
 	function reset(){
-		$('#senderList option[value=senderD]').attr('selected', 'selected');
-		$('#receiverList option[value=receiverD]').attr('selected', 'selected');
+		$('#senderList').val('senderD');
+		$('#receiverList').val('receiverD');
 		$('#titleInput').val('');
 		$('#bodyInput').val('');
 	}
