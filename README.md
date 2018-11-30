@@ -14,10 +14,10 @@ Kudos is a a MongoDB-based application that allows users to send positive messag
   3. The kudos are simultaneously sent to the database for storange and dynamically rendered to the page, so there is no need to refresh to      see the displays.
   
  **Technology:**
-  1. The main technology of this page is MongoDB. Using Mongoose, models were constructed so that user inputs could be properly         converted        to BSON and stored. 
-  2. Taking advantage of MongoDB linking, the unique sender ID was also sent along so that the kudos ID could be dynamically stored to an        array on the sender object, thus allowing an administrator to pull up all a sender's message history through his/her ID.
-  3. Database call functions were constructed using the Node and Express applications. Some were integrated into the UI (such as GET to          retrieve information and POST to store kudos). Others were kept unintegrated as more backend administrator functions (such as POST to      create new users and mass GET functions for all available info).
-  4. The UI was constructed using Boostrap structuring with customized CSS added on as needed. As such, the entire page is mobile                responsive to even less than 400px in width.
+  1. The main technology of this page is MongoDB. Using Mongoose, models were constructed so that user inputs could be properly         converted to BSON and stored. 
+  2. Taking advantage of MongoDB linking, the unique sender ID was also sent along so that the kudos ID could be dynamically stored to an array on the sender object, thus allowing an administrator to pull up all a sender's message history through his/her ID.
+  3. Database call functions were constructed using the Node and Express applications. Some were integrated into the UI (such as GET to  retrieve information and POST to store kudos). Others were kept unintegrated as more backend administrator functions (such as POST to      create new users and mass GET functions for all available info).
+  4. The UI was constructed using Boostrap structuring with customized CSS added on as needed. As such, the entire page is mobile responsive to even less than 400px in width.
   
 **Future Development:**
     1. The first functionality would be to add in login features. This way, each user could only send kudos under their own name. 
