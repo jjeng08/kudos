@@ -19,9 +19,9 @@ Kudos is a a MongoDB-based application that allows users to send positive messag
   3. Database call functions were constructed using the Node and Express applications. Some were integrated into the UI (such as GET to          retrieve information and POST to store kudos). Others were kept unintegrated as more backend administrator functions (such as POST to      create new users and mass GET functions for all available info).
   4. The UI was constructed using Boostrap structuring with customized CSS added on as needed. As such, the entire page is mobile                responsive to even less than 400px in width.
   
-  Future Development:
+**Future Development:**
     1. The first functionality would be to add in login features. This way, each user could only send kudos under their own name. 
     2. This naturally ties into a sign-in function that allows new users to create profiles and begin posting.
     3. Some sort of categorization system could be implemented to filter what kudos are being displayed.
   
-  NOTE: I discovered an interesting bug between MongoDB and Heroku. During my local usage, I was able to pass the kudos ID (formatted as         id: ObjectId("2rq058hqo3ih4lqy3")) to an array on the sender object. However, when running from Heroku, the data is instead             stored as an oddly-named object (formatted as "id": {"$oid": "2rq058hqo3ih4lqy3"}). The result is that the local-version does           not work on Heroku and vise versa. While this does not affect the current build's functionality, it does impede future                   development and raise questions as to just what is going on behind the Heroku scenes.
+  **NOTE:** I discovered an interesting bug between MongoDB and Heroku. During my local usage, I was able to pass the kudos ID (formatted as         id: ObjectId("2rq058hqo3ih4lqy3")) to an array on the sender object. However, when running from Heroku, the data is instead             stored as an oddly-named object (formatted as "id": {"$oid": "2rq058hqo3ih4lqy3"}). The result is that the local-version does           not work on Heroku and vise versa. While this does not affect the current build's functionality, it does impede future                   development and raise questions as to just what is going on behind the Heroku scenes.
