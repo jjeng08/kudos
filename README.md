@@ -2,7 +2,7 @@
 
 Kudos is a a MongoDB-based application that allows users to send positive messages, or kudos' (derived from the ancient Greek  κῦδος meaning 'praise' or 'renown') to one another. 
 
-How To Use: 
+##How To Use: 
   1. Click the 'Give Kudos!' button at the top of the page.
   2. Select 'Sender' and 'Receiver'
   3. Type in a a title and message.
